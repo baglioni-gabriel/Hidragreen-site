@@ -81,3 +81,67 @@ img {
     padding: 0.5rem 1.2rem;
     border-radius: 5px;
 }
+/* --- 5. Hero Section --- */
+.hero {
+    /* Imagem de fundo (coloque o arquivo na pasta certa!) */
+    background-image: url('assets/img/banner-home.jpg'); 
+    background-size: cover;   /* Cobre a área toda */
+    background-position: center;
+    height: 90vh; /* Ocupa 90% da altura da tela */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    position: relative;
+    color: var(--branco);
+}
+
+/* Camada escura para o texto ficar legível sobre a foto */
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Preto com 60% opacidade */
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center; /* Texto centralizado */
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem; /* Tamanho grande */
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Botão Principal (CTA) */
+.btn-hero {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--branco);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-hero:hover {
+    background-color: #004d00; /* Um verde ainda mais escuro */
+    transform: scale(1.05); /* Cresce um pouquinho */
+}
+
+/* Ajuste para Celular (Responsividade) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem; /* Diminui a fonte no mobile */
+    }
+}
