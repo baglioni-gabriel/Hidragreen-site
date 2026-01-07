@@ -65,7 +65,7 @@ img {
 }
 
 .logo-img {
-    height: 200px; /* Altura fixa para o logo não ficar gigante */
+    height: 100px; /* Altura fixa para o logo não ficar gigante */
     width: auto;
 }
 
@@ -78,7 +78,7 @@ img {
 .menu-lista a {
     text-decoration: none; /* Tira o sublinhado */
     color: var(--cor-secundaria);
-    font-weight: 600;
+    font-weight: 400;
     transition: color 0.3s;
 }
 
@@ -97,7 +97,7 @@ img {
 
 /* botão destaque muda de cor*/
 .botao-destaque:hover {
-    color: var(--cor-primaria); /* Muda de cor ao passar o mouse */
+    color: var(--cor-secundaria); /* Muda de cor ao passar o mouse */
 }
 /* --- 5. Hero Section --- */
 .hero {
@@ -124,7 +124,7 @@ img {
 
 .hero-content {
     text-align: center; /* Texto centralizado */
-    max-width: 800px;
+    max-width: 600px;
 }
 
 .hero h1 {
@@ -287,7 +287,7 @@ img {
 }
 
 .form-group label {
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 0.5rem;
     color: var(--cor-texto);
 }
