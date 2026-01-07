@@ -145,3 +145,46 @@ img {
         font-size: 2rem; /* Diminui a fonte no mobile */
     }
 }
+/* --- 6. Estilos Gerais de Seções --- */
+.secao-padrao {
+    padding: 4rem 0; /* Espaço em cima e embaixo para respiro */
+    background-color: var(--branco);
+}
+
+.titulo-secao {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- 7. Grid de Serviços --- */
+.grid-servicos {
+    display: grid;
+    /* A LINHA MÁGICA DA ENGENHARIA: */
+    /* Cria colunas que se ajustam sozinhas. Mínimo de 280px, Máximo de 1 fraçao da tela */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem; /* Espaço entre os cards */
+}
+
+.card-servico {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px; /* Bordas arredondadas */
+    border-left: 5px solid var(--cor-primaria); /* Detalhe verde na lateral */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra leve */
+    transition: transform 0.3s ease;
+}
+
+.card-servico:hover {
+    transform: translateY(-5px); /* Efeito de "flutuar" ao passar o mouse */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.card-servico h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
