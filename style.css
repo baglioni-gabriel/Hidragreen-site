@@ -9,7 +9,7 @@
     --cinza: #8d959c;  /* cinza mais intenso para detalhes */
     --cinza-escuro: #a7a7a7;
 
-    {
+    
     /* ... suas cores continuam aqui ... */
     
     /* Tipografia */
@@ -28,8 +28,8 @@
 }
 
 body {
-    font-family: var(--fonte-texto)
-    background-color: var(--cinza);
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.6;
 }
