@@ -1,11 +1,19 @@
 /* --- 1. Variáveis Globais (A Paleta) --- */
 :root {
     /* Cores Institucionais - Substitua pelos seus códigos depois */
-    --cor-primaria: #006400; /* Verde Escuro (Exemplo) */
-    --cor-secundaria: #003366; /* Azul Escuro (Exemplo) */
+    --cor-primaria: #31a400; /* Verde Escuro (Exemplo) */
+    --cor-secundaria: #024aa8; /* Azul Escuro (Exemplo) */
     --cor-fundo: #f4f4f4;      /* Cinza bem claro para fundo */
     --cor-texto: #333333;      /* Preto suave para leitura */
     --branco: #ffffff;
+    --cinza: #8d959c;  /* cinza mais intenso para detalhes
+
+    {
+    /* ... suas cores continuam aqui ... */
+    
+    /* Tipografia */
+    --fonte-titulo: 'Montserrat', sans-serif;
+    --fonte-texto: 'Open Sans', sans-serif;
     
     /* Espaçamentos Padrão (Consistência) */
     --padding-padrao: 2rem; /* ~32px */
@@ -19,12 +27,15 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte segura */
-    background-color: --cor-fundo;
+    font-family: var(--fonte-texto)
+    background-color: var(--cinza);
     color: var(--cor-texto);
     line-height: 1.6;
 }
 
+h1, h2, h3, .btn-hero, .btn-submit, .menu-lista a {
+    font-family: var(--fonte-titulo);
+}
 /* --- 3. Componentes Base --- */
 img {
     max-width: 100%; /* Imagem nunca estoura a tela no celular */
@@ -53,7 +64,7 @@ img {
 }
 
 .logo-img {
-    height: 50px; /* Altura fixa para o logo não ficar gigante */
+    height: 75px; /* Altura fixa para o logo não ficar gigante */
     width: auto;
 }
 
