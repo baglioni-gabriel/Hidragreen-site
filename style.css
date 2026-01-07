@@ -3,7 +3,7 @@
     /* Cores Institucionais - Substitua pelos seus códigos depois */
     --cor-primaria: #31a400; /* Verde Escuro (Exemplo) */
     --cor-secundaria: #00306e; /* Azul Escuro (Exemplo) */
-    --cor-fundo: #bababa;      /* Cinza bem claro para fundo */
+    --cor-fundo: #c7c7c7;      /* Cinza bem claro para fundo */
     --cor-texto: #333333;      /* Preto suave para leitura */
     --branco: #ffffff;
     --cinza: #8d959c;  /* cinza mais intenso para detalhes */
@@ -78,7 +78,7 @@ img {
 .menu-lista a {
     text-decoration: none; /* Tira o sublinhado */
     color: var(--cor-secundaria);
-    font-weight: 500;
+    font-weight: 550;
     transition: color 0.3s;
 }
 
