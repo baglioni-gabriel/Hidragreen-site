@@ -52,10 +52,13 @@ img {
 .navbar {
     background-color: var(--branco);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
-    padding: 1rem 0;
+    padding: 0;
     position: sticky; /* Menu fica fixo no topo ao rolar */
     top: 0;
     z-index: 1000;
+    /* DICA EXTRA: Adicione isso para garantir que a barra não tenha altura mínima forçada */
+    height: auto;
+    min-height: auto;
 }
 
 .navbar-content {
@@ -96,7 +99,7 @@ img {
     
     /* A CORREÇÃO ESTÁ AQUI: */
     /* Vamos transicionar 'all' (tudo) por 0.5 segundos */
-    transition: all 0.5s ease; 
+    transition: all 0.9s ease; 
 }
 
 .botao-destaque:hover {
