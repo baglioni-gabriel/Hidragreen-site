@@ -13,8 +13,8 @@
     /* ... suas cores continuam aqui ... */
     
     /* Tipografia */
-    --fonte-titulo: 'Montserrat', sans-serif;
-    --fonte-texto: 'Open Sans', sans-serif;
+   --fonte-titulo: 'Garet', sans-serif;  /* <--- Mudamos aqui */
+    --fonte-texto: 'Open Sans', sans-serif; /* Mantemos a legibilidade no texto */
     
     /* Espaçamentos Padrão (Consistência) */
     --padding-padrao: 2rem; /* ~32px */
