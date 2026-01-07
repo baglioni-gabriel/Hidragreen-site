@@ -188,3 +188,53 @@ img {
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
+/* --- 8. Grid de Obras (Portfólio) --- */
+.grid-obras {
+    display: grid;
+    /* Cria colunas automáticas um pouco maiores que os serviços */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.obra-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden; /* Importante: Impede a imagem de "sair" do quadro no zoom */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: 300px; /* Altura fixa para todos os cards ficarem iguais */
+    cursor: pointer;
+}
+
+.obra-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* A mágica: corta a imagem para preencher sem esticar */
+    transition: transform 0.4s ease; /* Animação suave */
+}
+
+/* Efeito Hover (Zoom na imagem) */
+.obra-item:hover img {
+    transform: scale(1.1); /* Aumenta 10% */
+}
+
+/* Legenda sobre a imagem */
+.obra-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* Degradê chique */
+    color: var(--branco);
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.obra-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.obra-info p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
