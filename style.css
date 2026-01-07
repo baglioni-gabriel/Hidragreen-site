@@ -6,7 +6,8 @@
     --cor-fundo: #f4f4f4;      /* Cinza bem claro para fundo */
     --cor-texto: #333333;      /* Preto suave para leitura */
     --branco: #ffffff;
-    --cinza: #8d959c;  /* cinza mais intenso para detalhes
+    --cinza: #8d959c;  /* cinza mais intenso para detalhes */
+    --cinza-escuro: #a7a7a7;
 
     {
     /* ... suas cores continuam aqui ... */
@@ -49,7 +50,7 @@ img {
 }
 /* --- 4. Estilos da Navbar --- */
 .navbar {
-    background-color: var(--branco);
+    background-color: var(--cinza-escuro);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
     padding: 1rem 0;
     position: sticky; /* Menu fica fixo no topo ao rolar */
