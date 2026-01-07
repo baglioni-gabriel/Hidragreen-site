@@ -78,7 +78,7 @@ img {
 .menu-lista a {
     text-decoration: none; /* Tira o sublinhado */
     color: var(--cor-secundaria);
-    font-weight: 400;
+    font-weight: 600;
     transition: color 0.3s;
 }
 
@@ -88,16 +88,21 @@ img {
 
 /* Botão de destaque no menu */
 .botao-destaque {
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-primaria); /* Verde */
     color: var(--branco) !important;
     padding: 0.5rem 1.2rem;
     border-radius: 5px;
-    transition: color 0.3s;
+    
+    /* A MÁGICA DA ENGENHARIA: */
+    /* "Anime o background e o tamanho em 0.3 segundos" */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* botão destaque muda de cor*/
 .botao-destaque:hover {
-    color: var(--cor-secundaria); /* Muda de cor ao passar o mouse */
+    background-color: var(--cor-secundaria); /* Muda para o Azul Escuro (ou outra cor que preferir) */
+    transform: scale(1.05); /* Cresce 5% para dar sensação de clique */
+    cursor: pointer;
 }
 /* --- 5. Hero Section --- */
 .hero {
