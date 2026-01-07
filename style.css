@@ -51,7 +51,7 @@ img {
 /* --- 4. Estilos da Navbar --- */
 .navbar {
     background-color: var(--branco);
-    box-shadow: 0 5px 7px rgba(0,0,0,0.1); /* Sombra sutil */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
     padding: 1rem 0;
     position: sticky; /* Menu fica fixo no topo ao rolar */
     top: 0;
