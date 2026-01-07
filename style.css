@@ -65,7 +65,7 @@ img {
 }
 
 .logo-img {
-    height: 160px; /* Altura fixa para o logo não ficar gigante */
+    height: 180px; /* Altura fixa para o logo não ficar gigante */
     width: auto;
 }
 
@@ -78,7 +78,7 @@ img {
 .menu-lista a {
     text-decoration: none; /* Tira o sublinhado */
     color: var(--cor-secundaria);
-    font-weight: 525;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
@@ -86,24 +86,26 @@ img {
     color: var(--cor-primaria); /* Muda de cor ao passar o mouse */
 }
 
-/* Botão de destaque no menu */
+/* Botão Destaque - Código Limpo */
 .botao-destaque {
+    /* Estado Inicial */
     background-color: var(--cor-primaria); /* Verde */
-    color: var(--branco) !important;
-    padding: 0.5rem 1.2rem;
+    color: #ffffff !important; /* Texto branco forçado */
+    padding: 10px 20px;
     border-radius: 5px;
     
-    /* A MÁGICA DA ENGENHARIA: */
-    /* "Anime o background e o tamanho em 0.3 segundos" */
-    transition: background-color 12.0 s ease-in-out, transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* A CORREÇÃO ESTÁ AQUI: */
+    /* Vamos transicionar 'all' (tudo) por 0.5 segundos */
+    transition: all 0.5s ease; 
 }
 
-/* botão destaque muda de cor*/
 .botao-destaque:hover {
-    background-color: var(--cor-secundaria); /* Muda para o Azul Escuro (ou outra cor que preferir) */
-    transform: scale(1.05); /* Cresce 5% para dar sensação de clique */
+    /* Estado Final (Mouse em cima) */
+    background-color: var(--cor-secundaria); /* Azul */
+    transform: scale(1.1); /* Aumenta 10% */
     cursor: pointer;
 }
+
 /* --- 5. Hero Section --- */
 .hero {
     /* Imagem de fundo (coloque o arquivo na pasta certa!) */
