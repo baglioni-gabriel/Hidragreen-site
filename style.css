@@ -3,7 +3,7 @@
     /* Cores Institucionais - Substitua pelos seus códigos depois */
     --cor-primaria: #31a400; /* Verde Escuro (Exemplo) */
     --cor-secundaria: #00306e; /* Azul Escuro (Exemplo) */
-    --cor-fundo: #c7c7c7;      /* Cinza bem claro para fundo */
+    --cor-fundo: #d7d3d3;      /* Cinza bem claro para fundo */
     --cor-texto: #333333;      /* Preto suave para leitura */
     --branco: #ffffff;
     --cinza: #8d959c;  /* cinza mais intenso para detalhes */
@@ -65,7 +65,7 @@ img {
 }
 
 .logo-img {
-    height: 80px; /* Altura fixa para o logo não ficar gigante */
+    height: 160px; /* Altura fixa para o logo não ficar gigante */
     width: auto;
 }
 
@@ -78,7 +78,7 @@ img {
 .menu-lista a {
     text-decoration: none; /* Tira o sublinhado */
     color: var(--cor-secundaria);
-    font-weight: 550;
+    font-weight: 525;
     transition: color 0.3s;
 }
 
