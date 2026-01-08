@@ -435,17 +435,5 @@ img {
     }
 }
 #quem-somos {
-    /* Removemos o background-color sólido e usamos o gradient */
-    background: linear-gradient(
-        to bottom, 
-        var(--cor-fundo) 0%,    /* Começa com a cor do site (ex: branco/cinza claro) */
-        #2c3e50 15%,            /* Aos 15% da altura, já virou o Cinza Escuro */
-        #2c3e50 85%,            /* Mantém Cinza Escuro até 85% */
-        var(--cor-fundo) 100%   /* Termina voltando para a cor do site */
-    );
-
-    color: #ffffff; /* Texto branco para contraste na parte escura */
-    
-    /* IMPORTANTE: Aumentamos o padding para o texto não ficar em cima do degradê */
-    padding: 6rem 0; 
+    background-color: #dcdcdc; /* Um cinza "prata" mais fechado */
 }
