@@ -354,3 +354,83 @@ img {
     font-size: 0.9rem;
     opacity: 0.8;
 }
+
+/* --- Seção Quem Somos --- */
+
+/* Layout Superior: Texto + Imagem */
+.sobre-wrapper {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    gap: 4rem; /* Espaço entre texto e foto */
+    margin-bottom: 4rem; /* Espaço antes de Missão/Visão */
+}
+
+.sobre-texto {
+    flex: 1; /* Ocupa metade do espaço */
+}
+
+.sobre-texto p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: justify; /* Texto justificado fica mais elegante em blocos grandes */
+}
+
+/* Estilo da Imagem e Legenda */
+.sobre-imagem-box {
+    flex: 1; /* Ocupa a outra metade */
+    text-align: center; /* Centraliza a legenda */
+}
+
+.sobre-imagem-box img {
+    border-radius: 8px;
+    box-shadow: 10px 10px 0px var(--cor-secundaria); /* Efeito de sombra sólida "deslocada" moderna */
+    margin-bottom: 0.5rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.legenda-foto {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Grid de Missão, Visão e Valores */
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.mvv-card {
+    background-color: #f8f9fa; /* Cinza bem clarinho */
+    padding: 2rem;
+    border-top: 4px solid var(--cor-primaria); /* Linha verde no topo */
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.mvv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.mvv-card h3 {
+    color: var(--cor-secundaria);
+    margin-bottom: 1rem;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .sobre-wrapper {
+        flex-direction: column; /* Empilha texto e foto no celular */
+        gap: 2rem;
+    }
+    
+    .titulo-secao {
+        text-align: center !important; /* Centraliza título no mobile */
+    }
+}
