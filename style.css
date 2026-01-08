@@ -68,7 +68,7 @@ img {
 }
 
 .logo-img {
-    height: 100px; /* Altura fixa para o logo não ficar gigante */
+    height: 90px; /* Altura fixa para o logo não ficar gigante */
     width: auto;
 }
 
