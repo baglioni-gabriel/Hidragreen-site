@@ -405,7 +405,7 @@ img {
 }
 
 .mvv-card {
-    background-color: #f8f9fa; /* Cinza bem clarinho */
+    background-color: #d7d3d3; /* Cinza bem clarinho */
     padding: 2rem;
     border-top: 4px solid var(--cor-primaria); /* Linha verde no topo */
     border-radius: 5px;
