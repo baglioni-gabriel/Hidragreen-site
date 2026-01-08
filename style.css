@@ -405,17 +405,29 @@ img {
 }
 
 .mvv-card {
-    background-color: #f9f9f9; /* Cinza bem clarinho */
+    background-color: #f8f9fa; /* Fundo cinza claro */
     padding: 2rem;
     border-top: 4px solid var(--cor-primaria); /* Linha verde no topo */
-    border-radius: 5px;
+    border-radius: 8px; /* Bordas um pouco mais arredondadas ficam melhores com sombra */
     text-align: center;
-    transition: transform 0.3s;
+    
+    /* --- A MÁGICA DA SOMBRA SUAVE --- */
+    /* 0px no eixo X (não vai pros lados) */
+    /* 4px no eixo Y (cai um pouquinho pra baixo) */
+    /* 15px de Desfoque (é isso que deixa suave) */
+    /* Preto com apenas 8% de opacidade (rgba 0,0,0, 0.08) */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    /* Importante: Mudamos a transição para 'all' para a sombra animar também */
+    transition: all 0.3s ease;
 }
 
 .mvv-card:hover {
+    /* Quando passa o mouse, ele sobe um pouco... */
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    
+    /* ...e a sombra fica um pouco maior e mais escura, dando a impressão de que levantou */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .mvv-card h3 {
