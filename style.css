@@ -4,7 +4,7 @@
     --cor-primaria: #31a400; /* Verde Escuro (Exemplo) */
     --cor-secundaria: #00306e; /* Azul Escuro (Exemplo) */
     --cor-fundotransparente: #001531;
-    --cor-fundo: #dcdcdc;      /* Cinza bem claro para fundo */
+    --cor-fundo: #f4f4f4;      /* Cinza bem claro para fundo */
     --cor-texto: #333333;      /* Preto suave para leitura */
     --branco: #ffffff;
     --cinza: #8d959c;  /* cinza mais intenso para detalhes */
@@ -435,5 +435,5 @@ img {
     }
 }
 #quem-somos {
-    background-color: #dcdcdc; /* Um cinza "prata" mais fechado */
+    background-color: #f4f4f4; /* Um cinza "prata" mais fechado */
 }
