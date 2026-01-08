@@ -3,6 +3,7 @@
     /* Cores Institucionais - Substitua pelos seus códigos depois */
     --cor-primaria: #31a400; /* Verde Escuro (Exemplo) */
     --cor-secundaria: #00306e; /* Azul Escuro (Exemplo) */
+    --cor-fundotransparente: #001531;
     --cor-fundo: #d7d3d3;      /* Cinza bem claro para fundo */
     --cor-texto: #333333;      /* Preto suave para leitura */
     --branco: #ffffff;
@@ -125,7 +126,7 @@ img {
 /* Camada escura para o texto ficar legível sobre a foto */
 .hero-overlay {
     /* MISTURA: Sua cor secundária (80%) com Transparente (20%) */
-    background-color: color-mix(in srgb, var(--cor-secundaria) 90%, transparent);
+    background-color: color-mix(in srgb, var(--cor-fundotransparente) 50%, transparent);
     
     /* O resto continua igual */
     position: absolute;
