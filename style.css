@@ -124,7 +124,10 @@ img {
 
 /* Camada escura para o texto ficar legível sobre a foto */
 .hero-overlay {
-    background-color: var(--cor-secundaria) (0, 0, 0, 0.6); /* Azul escuro com 60% opacidade */
+    /* MISTURA: Sua cor secundária (80%) com Transparente (20%) */
+    background-color: color-mix(in srgb, var(--cor-secundaria) 90%, transparent);
+    
+    /* O resto continua igual */
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
