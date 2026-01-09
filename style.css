@@ -531,16 +531,31 @@ img {
 /* O Trilho (A fita longa) */
 .slider-track {
     display: flex;
-    width: calc(300px * 12); /* 300px (largura do card) * 12 (10 itens + 2 clones) */
-    gap: 20px; /* Espaço entre as fotos */
+    gap: 20px;
     
-    /* A Animação Contínua */
-    animation: scroll 30s linear infinite;
+    /* MUDANÇA 1: Largura Automática */
+    /* Usamos max-content para o trilho crescer o quanto precisar (caber os 20 itens) */
+    width: max-content; 
+    
+    /* A animação continua a mesma, mas a matemática interna vai mudar */
+    animation: scroll 50s linear infinite; /* Aumentei para 40s para ficar suave */
 }
 
-/* PAUSA NO HOVER: O requisito principal */
 .slider-track:hover {
-    animation-play-state: paused; /* Congela a animação quando passa o mouse */
+    animation-play-state: paused;
+}
+
+/* MUDANÇA 2: A Matemática do Loop Perfeito */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* AQUI ESTÁ O SEGREDO: */
+        /* Movemos exatamente a largura da METADE dos itens (os 10 originais) */
+        /* (10 itens * 300px) + (10 espaços * 20px) = 3200px */
+        transform: translateX(-3200px);
+    }
 }
 
 /* O Card Individual */
