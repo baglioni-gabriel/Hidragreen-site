@@ -512,3 +512,87 @@ img {
 #quem-somos {
     background-color: #f4f4f4; /* Um cinza "prata" mais fechado */
 }
+
+/* --- Portfólio (Slider Infinito) --- */
+
+#portfolio {
+    background-color: #f5f5f5; /* Fundo levemente diferente para destacar */
+    overflow: hidden; /* Esconde o que sai da tela */
+    padding: 4rem 0;
+}
+
+.slider-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden; /* O segredo do carrossel: Cortar as laterais */
+    position: relative;
+}
+
+/* O Trilho (A fita longa) */
+.slider-track {
+    display: flex;
+    width: calc(300px * 12); /* 300px (largura do card) * 12 (10 itens + 2 clones) */
+    gap: 20px; /* Espaço entre as fotos */
+    
+    /* A Animação Contínua */
+    animation: scroll 30s linear infinite;
+}
+
+/* PAUSA NO HOVER: O requisito principal */
+.slider-track:hover {
+    animation-play-state: paused; /* Congela a animação quando passa o mouse */
+}
+
+/* O Card Individual */
+.slide {
+    width: 300px;
+    height: 400px; /* Altura fixa */
+    position: relative;
+    flex-shrink: 0; /* Garante que o card não esmague */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.slide:hover {
+    transform: scale(1.02); /* Leve zoom quando para o mouse */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* A Legenda (Overlay discreto embaixo) */
+.legenda-obra {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fundo preto transparente */
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.legenda-obra span {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #ccc; /* Subtítulo cinza claro */
+}
+
+/* A Matemática da Animação */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Movemos para a esquerda o tamanho de (10 cards + 10 gaps) */
+        /* Ajuste este valor se o pulo estiver visível */
+        transform: translateX(calc(-300px * 10 - 20px * 10)); 
+    }
+}
