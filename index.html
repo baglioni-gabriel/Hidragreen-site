@@ -238,7 +238,7 @@
             <p class="subtitulo-contato">Deixe seus dados e nossa equipe técnica entrará em contato.</p>
             
             <div class="form-wrapper">
-                <form action="#" method="POST" class="form-hidragreen">
+                <form class="form-hidragreen" id="form-contato">
                     
                     <div class="input-group">
                         <input type="text" name="nome" placeholder="Seu Nome Completo" required>
@@ -264,8 +264,8 @@
 
     <footer class="footer">
         <div class="container footer-content">
-            <p>&copy; 2025 Hidragreen Engenharia. Todos os direitos reservados.</p>
-            <p>Desenvolvido com tecnologia Poli-USP.</p>
+            <p>&copy; 2026 Hidragreen Engenharia. Todos os direitos reservados.</p>
+            <p></p>
         </div>
     </footer>
 
@@ -278,6 +278,62 @@
     telInput.addEventListener('input', function (e) {
         var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
         e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+    });
+</script>
+
+<script>
+    const formulario = document.getElementById('form-contato');
+    
+    formulario.addEventListener('submit', function(e) {
+        e.preventDefault(); // 1. Impede o site de recarregar
+        
+        // Captura o botão para dar feedback visual
+        const botao = formulario.querySelector('button');
+        const textoOriginal = botao.innerText;
+        
+        // Muda o texto para o usuário saber que está enviando
+        botao.innerText = 'ENVIANDO...';
+        botao.disabled = true;
+        botao.style.opacity = '0.7';
+
+        // 2. Coleta os dados dos campos
+        const dados = new FormData(formulario);
+        const objetoDados = Object.fromEntries(dados.entries());
+
+        // 3. Envia para o n8n (A Mágica acontece aqui)
+        // COLE A URL DO SEU WEBHOOK DO N8N AQUI EMBAIXO:
+        const webhookURL = 'https://baglioni.app.n8n.cloud/webhook-test/contato-hidragreen site'; 
+
+        fetch(webhookURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(objetoDados),
+        })
+        .then(response => {
+            if (response.ok) {
+                // Sucesso: Mostra mensagem e limpa o form
+                formulario.innerHTML = `
+                    <div style="text-align: center; color: var(--cor-primaria);">
+                        <h3>Recebemos seus dados!</h3>
+                        <p>Nossa inteligência artificial já está analisando seu perfil e entrará em contato em instantes.</p>
+                    </div>
+                `;
+            } else {
+                throw new Error('Erro no servidor');
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            botao.innerText = 'ERRO AO ENVIAR';
+            setTimeout(() => {
+                botao.innerText = textoOriginal;
+                botao.disabled = false;
+                botao.style.opacity = '1';
+            }, 3000);
+            alert('Houve um erro ao enviar. Por favor, tente novamente ou chame no WhatsApp.');
+        });
     });
 </script>
 </body>
