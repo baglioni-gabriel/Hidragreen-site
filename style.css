@@ -611,3 +611,59 @@ img {
         transform: translateX(calc(-300px * 10 - 20px * 10)); 
     }
 }
+
+/* --- Estilo do Formulário de Contato --- */
+
+#contato {
+    background-color: var(--branco); /* Ou cinza claro, se preferir contraste */
+    text-align: center; /* Centraliza tudo */
+    padding: 4rem 0;
+}
+
+.subtitulo-contato {
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center; /* Centraliza o formulário na tela */
+}
+
+.form-hidragreen {
+    width: 100%;
+    max-width: 500px; /* IMPORTANTE: Limita a largura para ficar elegante */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaço entre os campos */
+}
+
+/* Estilo dos Inputs (Caixas de texto) */
+.form-hidragreen input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    font-family: var(--fonte-texto); /* Usa a Open Sans */
+}
+
+/* Efeito ao clicar no campo (Foco) */
+.form-hidragreen input:focus {
+    border-color: var(--cor-primaria); /* Fica verde quando clica */
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 100, 0, 0.2);
+}
+
+/* Botão Específico do Formulário */
+.btn-full {
+    width: 100%; /* Botão ocupa a largura toda do formulário */
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    /* Ele já herda as cores e transições da classe .botao-destaque que criamos antes */
+}

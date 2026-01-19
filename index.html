@@ -246,24 +246,32 @@
                     </div>
                 </div>
 
-                <form id="form-contato" class="form-grid">
-                    <div class="form-group">
-                        <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                <section id="contato" class="secao-padrao">
+        <div class="container">
+            <h2 class="titulo-secao">VAMOS CONVERSAR?</h2>
+            <p class="subtitulo-contato">Deixe seus dados e nossa equipe técnica entrará em contato.</p>
+            
+            <div class="form-wrapper">
+                <form action="#" method="POST" class="form-hidragreen">
+                    
+                    <div class="input-group">
+                        <input type="text" name="nome" placeholder="Seu Nome Completo" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">E-mail Corporativo</label>
-                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Seu Melhor E-mail" required>
                     </div>
 
-                    <div class="form-group full-width">
-                        <label for="mensagem">Mensagem / Detalhes da Obra</label>
-                        <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Descreva brevemente sua necessidade..."></textarea>
+                    <div class="input-group">
+                        <input type="tel" name="telefone" placeholder="Telefone / WhatsApp (com DDD)" required>
                     </div>
 
-                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                    <button type="submit" class="botao-destaque btn-full">SOLICITAR CONTATO</button>
+                    
                 </form>
+            </div>
+        </div>
+    </section>
             </div>
         </div>
     </section>
@@ -276,6 +284,16 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+    /* Máscara simples para telefone */
+    const telInput = document.querySelector('input[name="telefone"]');
+    
+    telInput.addEventListener('input', function (e) {
+        var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+        e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+    });
+</script>
 </body>
 </body>
 </html>
